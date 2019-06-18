@@ -1,0 +1,42 @@
+buildscript {
+
+    ext {
+        // Dependencies versions
+        kotlin_version = '1.3.31'
+        kotlin_core_version = '1.0.2'
+        junit_test_version = '4.12'
+        constraintLayout = '1.1.3'
+        app_compact_version = '1.0.2'
+        koin_version = '2.0.1'
+
+        // All dependencies
+        CoreKotlin = "androidx.core:core-ktx:${kotlin_core_version}"
+        JunitTest = "junit:junit:${junit_test_version}"
+        ConstraintLayout = "androidx.constraintlayout:constraintlayout:${constraintLayout}"
+        AppCompact = "androidx.appcompat:appcompat:${app_compact_version}"
+        JetbrainsKotlin = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}"
+        Koin = "org.koin:koin-core:${koin_version}"
+        KoinExtensions = "org.koin:koin-core-ext:${koin_version}"
+    }
+
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.4.1'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
