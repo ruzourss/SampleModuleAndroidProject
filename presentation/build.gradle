@@ -21,6 +21,15 @@ android {
 }
 
 dependencies {
+
+    implementation project(':commons')
+    implementation project(':data')
+    implementation project(':domain')
+
+    implementation rootProject.ext.Koin
+    implementation rootProject.ext.KoinExtensions
+    implementation rootProject.ext.KoinExpirmentalFeatures
+    implementation rootProject.ext.kotlinCoroutines
     implementation rootProject.ext.JetbrainsKotlin
     implementation rootProject.ext.AppCompact
     implementation rootProject.ext.CoreKotlin
