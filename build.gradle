@@ -1,6 +1,15 @@
 buildscript {
 
     ext {
+
+        // app SDK versions
+        compileSdkVersion = 28
+        minSdkVersion = 25
+        targetSdkVersion = 28
+        versionCode = 1
+        versionName = "1.0.0"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
         // Dependencies versions
         kotlin_version = '1.3.31'
         kotlin_core_version = '1.0.2'
