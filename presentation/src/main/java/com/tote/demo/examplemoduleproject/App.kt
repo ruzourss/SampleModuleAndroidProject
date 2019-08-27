@@ -2,6 +2,8 @@ package com.tote.demo.examplemoduleproject
 
 import android.app.Application
 import com.tote.demo.data.di.dataModule
+import org.koin.android.ext.koin.androidContext
+import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
 
 class App : Application() {
@@ -9,7 +11,9 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         startKoin {
-            modules(dataModule)
+            androidLogger()
+            androidContext(this@App)
+            modules(listOf(dataModule))
         }
     }
 

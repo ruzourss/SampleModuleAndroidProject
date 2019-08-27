@@ -1,4 +1,3 @@
 package com.tote.demo.domain.login
 
-class LoginResponse {
-}
+data class LoginResponse(val username: String)
